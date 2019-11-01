@@ -8,5 +8,10 @@
             "email": "nabil@kadimi.com"
         }
     ],
-    "require": {}
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Kadimi\\ArrayManipulators\\": "src/"
+        }
+    }
 }

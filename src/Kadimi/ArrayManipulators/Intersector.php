@@ -11,10 +11,10 @@ namespace Kadimi\ArrayManipulators;
 /**
  * 
  */
-class Merger extends ManipulatorMultipleArrayAbstract
+class Intersector extends ManipulatorMultipleArrayAbstract
 {
 	public static function execute(Array...$arrays)
 	{
-		return call_user_func_array('array_merge', $arrays);
+		return call_user_func_array('array_intersect', $arrays);
 	}
 }
