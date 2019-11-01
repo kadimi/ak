@@ -24,14 +24,36 @@ $array_1 = ['a', 'b'];
 $array_2 = ['b', 'c'];
 
 /**
- * Manual test.
+ * Testing single array manipulators.
  */
-var_dump([
-	'Randomizer' => Randomizer::execute($array_1),
-	'Reverser' => Reverser::execute($array_1),
-]);
-var_dump([
-	'Combiner' => Combiner::execute($array_1, $array_2),
-	'Intersector' => Intersector::execute($array_1, $array_2),
-	'Merger' => Merger::execute($array_1, $array_2),
-]);
+$single = [
+	'Randomizer',
+	'Reverser',
+];
+
+array_walk($single, function($manipulator) use( $array_1) {
+	$callback = sprintf('Kadimi\ArrayManipulators\%s::execute', $manipulator);
+	
+	echo "\n";
+	echo "=== $manipulator ===\n";
+
+	var_dump(call_user_func($callback, $array_1));
+});
+
+/**
+ * Testing multiple array manipulators.
+ */
+$multiple = [
+	'Combiner',
+	'Intersector',
+	'Merger',
+];
+
+array_walk($multiple, function($manipulator) use( $array_1, $array_2) {
+	$callback = sprintf('Kadimi\ArrayManipulators\%s::execute', $manipulator);
+	
+	echo "\n";
+	echo "=== $manipulator ===\n";
+
+	var_dump(call_user_func($callback, $array_1, $array_2));
+});
