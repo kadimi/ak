@@ -1,0 +1,12 @@
+{
+    "name": "kadimi/ak",
+    "type": "project",
+    "license": "GPL-3.0-or-later",
+    "authors": [
+        {
+            "name": "Nabil Kadimi",
+            "email": "nabil@kadimi.com"
+        }
+    ],
+    "require": {}
+}
