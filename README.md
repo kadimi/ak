@@ -14,7 +14,6 @@ cd ak
 # Composer autoload
 composer dump-autoload -o
 
-
 # Basic manual testing
 php index.php
 ```
