@@ -17,3 +17,7 @@ composer dump-autoload -o
 # Basic manual testing
 php index.php
 ```
+
+### Output example
+
+![](http://i.imgur.com/qjD8vaN.png)
